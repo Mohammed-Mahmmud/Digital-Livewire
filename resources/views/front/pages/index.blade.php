@@ -1,5 +1,6 @@
 @extends('front.layouts.master')
-@section('front-title', 'Digital Agency')
+@section('front-title', 'Agency')
+@section('index-active', 'active')
 @section('front-header')
     <x-front.partials.main-header :slug="'Home'"></x-front.partials.main-header>
 @endsection

@@ -1,5 +1,5 @@
 @extends('front.layouts.master')
-@section('front-title', 'Digital Agency - Not Found')
+@section('front-title', 'Not Found')
 @section('front-header')
     <x-front.partials.sub-header :slug="'Not Found'"></x-front.partials.sub-header>
 @endsection

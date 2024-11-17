@@ -2,18 +2,16 @@
      <div class="copyright">
          <div class="row">
              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                 &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-
-                 <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                 Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
-                 Distributed By a <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                 All Right Reserved. {{ date('Y') }}
+                 @ Designed & Distributed By a <a class="border-bottom"
+                     href="https://www.linkedin.com/in/mohamed-mahmmud">Eng.Mohamed Khater</a><br><br>
              </div>
              <div class="col-md-6 text-center text-md-end">
                  <div class="footer-menu">
-                     <a href="">Home</a>
-                     <a href="">Cookies</a>
-                     <a href="">Help</a>
-                     <a href="">FQAs</a>
+                     <a href="{{ route('front.pages') }}">Home</a>
+                     <a href="{{ route('front.pages') }}">Cookies</a>
+                     <a href="{{ route('front.pages') }}">Help</a>
+                     <a href="{{ route('front.pages') }}">FQAs</a>
                  </div>
              </div>
          </div>

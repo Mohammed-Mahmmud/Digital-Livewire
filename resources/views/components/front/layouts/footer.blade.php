@@ -16,11 +16,11 @@
               </div>
               <div class="col-md-6 col-lg-3">
                   <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
-                  <a class="btn btn-link" href="">About Us</a>
-                  <a class="btn btn-link" href="">Contact Us</a>
-                  <a class="btn btn-link" href="">Privacy Policy</a>
-                  <a class="btn btn-link" href="">Terms & Condition</a>
-                  <a class="btn btn-link" href="">Career</a>
+                  <a class="btn btn-link" href="{{ route('front.pages') }}">About Us</a>
+                  <a class="btn btn-link" href="{{ route('front.pages') }}">Contact Us</a>
+                  <a class="btn btn-link" href="{{ route('front.pages') }}">Privacy Policy</a>
+                  <a class="btn btn-link" href="{{ route('front.pages') }}">Terms & Condition</a>
+                  <a class="btn btn-link" href="{{ route('front.pages', ['slug' => 'team']) }}">Career</a>
               </div>
               <div class="col-md-6 col-lg-3">
                   <p class="section-title text-white h5 mb-4">Gallery<span></span></p>
@@ -58,6 +58,6 @@
               </div>
           </div>
       </div>
-     @include('front.layouts.partials.copyright')
+      @include('front.layouts.partials.copyright')
   </div>
   <!-- Footer End -->

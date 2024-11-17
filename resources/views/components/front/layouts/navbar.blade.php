@@ -9,19 +9,24 @@
      </button>
      <div class="collapse navbar-collapse" id="navbarCollapse">
          <div class="navbar-nav mx-auto py-0">
-             <a href="{{ route('front.pages') }}" class="nav-item nav-link active">Home</a>
-             <a href="{{ route('front.pages', ['slug' => 'about']) }}" class="nav-item nav-link">About</a>
-             <a href="{{ route('front.pages', ['slug' => 'services']) }}" class="nav-item nav-link">Service</a>
-             <a href="{{ route('front.pages', ['slug' => 'projects']) }}" class="nav-item nav-link">Project</a>
+             <a href="{{ route('front.pages') }}" class="nav-item nav-link @yield('index-active')">Home</a>
+             <a href="{{ route('front.pages', ['slug' => 'about']) }}"
+                 class="nav-item nav-link @yield('about-active')">About</a>
+             <a href="{{ route('front.pages', ['slug' => 'services']) }}"
+                 class="nav-item nav-link @yield('service-active')">Service</a>
+             <a href="{{ route('front.pages', ['slug' => 'projects']) }}"
+                 class="nav-item nav-link @yield('project-active')">Project</a>
              <div class="nav-item dropdown">
-                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                 <a href="#" class="nav-link dropdown-toggle @yield('team-testimonial-active')" data-bs-toggle="dropdown">Pages</a>
                  <div class="dropdown-menu m-0">
-                     <a href="{{ route('front.pages', ['slug' => 'team']) }}" class="dropdown-item">Our Team</a>
-                     <a href="{{ route('front.pages', ['slug' => 'testimonial']) }}" class="dropdown-item">Testimonial</a>
-                     {{-- <a href="404.html" class="dropdown-item">404 Page</a> --}}
+                     <a href="{{ route('front.pages', ['slug' => 'team']) }}"
+                         class="dropdown-item @yield('team-active')">Our Team</a>
+                     <a href="{{ route('front.pages', ['slug' => 'testimonial']) }}"
+                         class="dropdown-item @yield('testimonial-active')">Testimonial</a>
                  </div>
              </div>
-             <a href="{{ route('front.pages', ['slug' => 'contact']) }}" class="nav-item nav-link">Contact</a>
+             <a href="{{ route('front.pages', ['slug' => 'contact']) }}"
+                 class="nav-item nav-link @yield('contact-active')">Contact</a>
          </div>
          <a href="{{ route('front.pages', ['slug' => 'contact']) }}"
              class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get
