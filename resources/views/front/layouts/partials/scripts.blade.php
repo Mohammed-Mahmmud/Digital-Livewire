@@ -10,3 +10,4 @@
  <script src="{{ asset('front') }}/lib/lightbox/js/lightbox.min.js"></script>
  <!-- Template Javascript -->
  <script src="{{ asset('front') }}/js/main.js"></script>
+@yield('scripts')

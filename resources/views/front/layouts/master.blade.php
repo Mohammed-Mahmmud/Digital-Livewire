@@ -8,7 +8,7 @@
         @include('front.layouts.partials.spinner')
         <div class="container-xxl position-relative p-0">
             <x-front.layouts.navbar></x-front.layouts.navbar>
-            <x-front.partials.main-header></x-front.partials.main-header>
+            @yield('front-header')
         </div>
         @yield('content')
         <x-front.layouts.footer></x-front.layouts.footer>
