@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 
 class WebsiteController extends Controller
 {
-    public function index($slug = null, $subSlug = null)
+    public function index($slug = null)
     {
-        if (isset($slug) && empty($subSlug)) {
+        if (isset($slug)) {
             try {
                 return view('front.pages.' . $slug);
             } catch (\Throwable $th) {
