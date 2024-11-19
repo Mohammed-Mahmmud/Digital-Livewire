@@ -29,7 +29,7 @@ class AdminLoginComponent extends Component
                     'email' => trans('auth.failed'),
                 ]);
             }
-            return to_route('admin.dashboard.index');
+            return to_route('admin.dashboard');
         } catch (\Exception $e) {
             session()->flash('error', $e->getMessage());
         }

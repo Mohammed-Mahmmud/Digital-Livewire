@@ -70,11 +70,22 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <form method="POST" action="#">
-                            <?php echo csrf_field(); ?>
-                            <button type="submit" class="dropdown-item"><i class="bx bx-power-off me-2"></i>
-                                <span class="align-middle">Log Out</span></button>
-                        </form>
+                        <?php
+$__split = function ($name, $params = []) {
+    return [$name, $params];
+};
+[$__name, $__params] = $__split('dashboard.auth.admin-logout-component');
+
+$__html = app('livewire')->mount($__name, $__params, 'lw-518150527-0', $__slots ?? [], get_defined_vars());
+
+echo $__html;
+
+unset($__html);
+unset($__name);
+unset($__params);
+unset($__split);
+if (isset($__slots)) unset($__slots);
+?>
                     </li>
                 </ul>
             </li>

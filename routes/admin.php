@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\DashboardController;
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,9 @@ use Illuminate\Support\Facades\Route;
 // require __DIR__ . '/auth.php';
 
 Route::prefix('admin')->name('admin.')->group(function () {
-    Route::resource('dashboard', DashboardController::class)->names('dashboard');
-    Route::view('login', 'dashboard.auth.pages.login')->name('login');
+    Route::middleware('admin')->group(function () {
+        Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    });
+    Route::view('login', 'dashboard.auth.pages.login')
+        ->Middleware('guest:admin')->name('login');
 });
