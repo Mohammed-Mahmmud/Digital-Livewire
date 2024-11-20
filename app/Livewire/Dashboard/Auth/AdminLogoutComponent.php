@@ -9,7 +9,6 @@ class AdminLogoutComponent extends Component
 {
     public function logout()
     {
-        // dd(session());
         Auth::guard('admin')->logout();
         session()->invalidate();
         session()->regenerateToken();

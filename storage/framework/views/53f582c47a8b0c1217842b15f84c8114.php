@@ -40,6 +40,6 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="<?php echo e(asset('dashboard')); ?>/assets/js/config.js"></script>
-<?php echo $__env->yieldContent('dashboard-styles'); ?>
+    <?php echo $__env->yieldContent('styles'); ?>
 </head>
 <?php /**PATH /home/mohamed-khater/Documents/projects/Digital-Livewire/DigitalLivewire/resources/views/dashboard/layouts/partials/main-head.blade.php ENDPATH**/ ?>

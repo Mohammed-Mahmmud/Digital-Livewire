@@ -25,7 +25,8 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::middleware('admin')->group(function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+        Route::view('settings', 'dashboard.pages.settings.view')->name('settings');
     });
     Route::view('login', 'dashboard.auth.pages.login')
-        ->Middleware('guest:admin')->name('login');
+        ->middleware('guest:admin')->name('login');
 });
