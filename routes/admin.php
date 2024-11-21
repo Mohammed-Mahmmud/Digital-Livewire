@@ -26,7 +26,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::middleware('admin')->group(function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::view('settings', 'dashboard.pages.settings.view')->name('settings');
-        Route::view('skills', 'dashboard.pages.skills.view')->name('skills');
+        Route::view('skills', 'dashboard.pages.skills.index')->name('skills');
     });
     Route::view('login', 'dashboard.auth.pages.login')
         ->middleware('guest:admin')->name('login');
