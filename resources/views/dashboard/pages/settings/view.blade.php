@@ -7,4 +7,5 @@
         <h4 class="fw-bold py-3 mb-4">Settings</h4>
         @livewire('dashboard.pages.settings.update-settings')
         <!-- / Content -->
-    @endsection
+    </div>
+@endsection

@@ -31,11 +31,11 @@
 
             <!-- Layout container -->
             <div class="layout-page">
-               <?php echo $__env->make('dashboard.layouts.partials.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                <?php echo $__env->make('dashboard.layouts.partials.navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
 
                 <!-- Content wrapper -->
                 <div class="content-wrapper">
-                   <?php echo $__env->yieldContent('content'); ?>
+                    <?php echo $__env->yieldContent('content'); ?>
                     <?php echo $__env->make('dashboard.layouts.partials.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                     <div class="content-backdrop fade"></div>
                 </div>
@@ -49,6 +49,7 @@
     </div>
     <!-- / Layout wrapper -->
     <?php echo $__env->make('dashboard.layouts.partials.scripts', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    
 </body>
 
 </html>

@@ -3,7 +3,7 @@
         <div class="card mb-4">
             <div class="card-body">
                 @if (session()->has('message'))
-                    <div class="alert alert-primary">{{ session('message') }}
+                    <div class="alert alert-primary success-alert">{{ session('message') }}
                     </div>
                 @endif
                 <div class="row g-3">
@@ -85,13 +85,13 @@
         </div>
     </form>
 </div>
-@section('script')
-    {{-- <script>
+{{-- @script
+    <script>
         Livewire.hook('morph.updated', ({
             el,
             component
         }) => {
             // alert("Morph Updated");
         });
-    </script> --}}
-@endsection
+    </script>
+@endscript --}}

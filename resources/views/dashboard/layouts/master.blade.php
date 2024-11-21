@@ -12,11 +12,11 @@
 
             <!-- Layout container -->
             <div class="layout-page">
-               @include('dashboard.layouts.partials.navbar')
+                @include('dashboard.layouts.partials.navbar')
 
                 <!-- Content wrapper -->
                 <div class="content-wrapper">
-                   @yield('content')
+                    @yield('content')
                     @include('dashboard.layouts.partials.footer')
                     <div class="content-backdrop fade"></div>
                 </div>
@@ -30,6 +30,7 @@
     </div>
     <!-- / Layout wrapper -->
     @include('dashboard.layouts.partials.scripts')
+    
 </body>
 
 </html>

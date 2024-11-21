@@ -3,7 +3,7 @@
         <div class="card mb-4">
             <div class="card-body">
                 <!--[if BLOCK]><![endif]--><?php if(session()->has('message')): ?>
-                    <div class="alert alert-primary"><?php echo e(session('message')); ?>
+                    <div class="alert alert-primary success-alert"><?php echo e(session('message')); ?>
 
                     </div>
                 <?php endif; ?><!--[if ENDBLOCK]><![endif]-->
@@ -142,7 +142,5 @@ unset($__errorArgs, $__bag); ?><!--[if ENDBLOCK]><![endif]-->
         </div>
     </form>
 </div>
-<?php $__env->startSection('script'); ?>
-    
-<?php $__env->stopSection(); ?>
+
 <?php /**PATH /home/mohamed-khater/Documents/projects/Digital-Livewire/DigitalLivewire/resources/views/dashboard/pages/settings/update-settings.blade.php ENDPATH**/ ?>

@@ -20,7 +20,5 @@
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-
-
 <?php echo $__env->yieldContent('scripts'); ?>
 <?php /**PATH /home/mohamed-khater/Documents/projects/Digital-Livewire/DigitalLivewire/resources/views/dashboard/layouts/partials/scripts.blade.php ENDPATH**/ ?>

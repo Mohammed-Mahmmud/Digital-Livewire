@@ -28,7 +28,6 @@ class UpdateSettings extends Component
     public function submit()
     {
         $this->validate($this->rules(), [], $this->attributes());
-        // $this->settings->update($this->settings->toArray());
         $this->settings->save();
         session()->flash('message', 'Settings updated successfully');
     }
