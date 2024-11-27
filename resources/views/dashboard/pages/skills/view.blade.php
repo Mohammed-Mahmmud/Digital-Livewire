@@ -9,6 +9,7 @@
           <table class="table">
               <thead>
                   <tr>
+                      <th>#</th>
                       <th>Name</th>
                       <th>Progress</th>
                       <th>Actions</th>
@@ -17,7 +18,8 @@
               <tbody class="table-border-bottom-0">
                   @if (count($skills) > 0)
                       @foreach ($skills as $item)
-                          <tr class="table-warning">
+                          <tr class="table-light">
+                              <td>{{ $loop->iteration  }}</td>
                               <td>{{ $item->name }}</td>
                               <td><span class="badge bg-label-info me-1">{{ $item->progress }}</span></td>
                               <td>
@@ -26,10 +28,13 @@
                                           data-bs-toggle="dropdown">
                                           <i class="bx bx-dots-vertical-rounded"></i>
                                       </button>
-                                      <div class="dropdown-menu">
-                                          <a class="dropdown-item" href="javascript:void(0);"><i
-                                                  class="bx bx-edit-alt me-1"></i> Edit</a>
-                                          <a class="dropdown-item" href="javascript:void(0);"><i
+                                      <div class="dropdown-menu ">
+                                          <a class="dropdown-item" href="#"
+                                              wire:click.prevent="$dispatchTo('dashboard.pages.skills.update','edit',{id:{{ $item->id }}})"><i
+                                                  class="bx bx-edit-alt me-1"></i>
+                                              Edit</a>
+                                          <a class="dropdown-item" href="#"
+                                              wire:click.prevent="$dispatchTo('dashboard.pages.skills.delete','destroy',{id:{{ $item->id }}})"><i
                                                   class="bx bx-trash me-1"></i>
                                               Delete</a>
                                       </div>
@@ -43,7 +48,7 @@
                       </tr>
                   @endif
               </tbody>
-              {{ $skills->links() }}
           </table>
+          <div class="m-5"> {{ $skills->links() }}</div>
       </div>
   </div>

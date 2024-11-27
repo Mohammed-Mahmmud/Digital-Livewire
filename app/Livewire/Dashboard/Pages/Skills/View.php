@@ -6,8 +6,9 @@ use App\Models\Skill;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-class ViewSkills extends Component
+class View extends Component
 {
+    protected $listeners = ['refreshTable' => '$refresh'];
     use WithPagination;
     public $search;
     protected $queryString = [
@@ -18,8 +19,9 @@ class ViewSkills extends Component
     {
         $this->resetPage();
     }
+
     public function render()
     {
-        return view('dashboard.pages.skills.view-skills', ['skills' => Skill::whereAny(['name', 'progress'], 'like', '%' . $this->search . '%')->paginate(10)]);
+        return view('dashboard.pages.skills.view', ['skills' => Skill::whereAny(['name', 'progress'], 'like', '%' . $this->search . '%')->paginate(10)]);
     }
 }

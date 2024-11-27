@@ -9,6 +9,7 @@ class Skill extends Model
 {
     use HasFactory;
     protected $table = 'skills';
+    protected $guarded = [];
     public $timestamps = true;
     public $incrementing = true;
     protected $primaryKey  = 'id';
