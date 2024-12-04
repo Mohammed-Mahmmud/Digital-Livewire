@@ -1,41 +1,40 @@
 <?php
 
-namespace App\Livewire\Dashboard\Pages\Skills;
+namespace App\Livewire\Dashboard\Pages\Categories;
 
-use App\Http\Requests\Dashboard\SkillsRequest;
-use App\Models\Skill;
+use App\Http\Requests\Dashboard\CategoryRequest;
+use App\Models\Category;
 use Livewire\Component;
 
 class Update extends Component
 {
-    public $data, $skills = [];
+    public $data, $category = [];
     protected $listeners = ['edit'];
     public function edit($id)
     {
-        $this->data = Skill::findOrFail($id);
-        $this->skills['name'] =  $this->data->name;
-        $this->skills['progress'] =  $this->data->progress;
+        $this->data = Category::findOrFail($id);
+        $this->category['name'] =  $this->data->name;
         $this->dispatch('updateModalToggle');
     }
     public function rules()
     {
-        return (new SkillsRequest())->rules();
+        return (new CategoryRequest())->rules();
     }
     public function attributes()
     {
-        return (new SkillsRequest())->attributes();
+        return (new CategoryRequest())->attributes();
     }
     public function submit()
     {
         $this->validate($this->rules(), [], $this->attributes());
-        $this->data->update($this->skills);
+        $this->data->update($this->category);
         $this->dispatch('updateModalToggle');
         $this->dispatch('refreshTable')->to(View::class);
-        $this->reset('skills');
+        $this->reset('category');
         toastr()->info('Data has been updated successfully!');
     }
     public function render()
     {
-        return view('dashboard.pages.skills.update');
+        return view('dashboard.pages.categories.update');
     }
 }

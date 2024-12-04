@@ -30,7 +30,7 @@
     </div>
     <!-- / Layout wrapper -->
     @include('dashboard.layouts.partials.scripts')
-    
+
 </body>
 
 </html>

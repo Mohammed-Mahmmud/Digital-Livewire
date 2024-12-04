@@ -1,33 +1,33 @@
 <?php
 
-namespace App\Livewire\Dashboard\Pages\Skills;
+namespace App\Livewire\Dashboard\Pages\Categories;
 
-use App\Http\Requests\Dashboard\SkillsRequest;
-use App\Models\Skill;
+use App\Http\Requests\Dashboard\CategoryRequest;
+use App\Models\Category;
 use Livewire\Component;
 
 class Create extends Component
 {
-    public $skills = [];
+    public $category = [];
     public function rules()
     {
-        return (new SkillsRequest())->rules();
+        return (new CategoryRequest())->rules();
     }
     public function attributes()
     {
-        return (new SkillsRequest())->attributes();
+        return (new CategoryRequest())->attributes();
     }
     public function submit()
     {
         $this->validate($this->rules(), [], $this->attributes());
-        Skill::create($this->skills);
-        $this->reset('skills');
+        Category::create($this->category);
+        $this->reset('category');
         $this->dispatch('createModalToggle');
         $this->dispatch('refreshTable')->to(View::class);
         toastr()->success('Data has been saved successfully!');
     }
     public function render()
     {
-        return view('dashboard.pages.skills.create');
+        return view('dashboard.pages.categories.create');
     }
 }

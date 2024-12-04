@@ -1,33 +1,33 @@
 <?php
 
-namespace App\Livewire\Dashboard\Pages\Skills;
+namespace App\Livewire\Dashboard\Pages\Counters;
 
-use App\Http\Requests\Dashboard\SkillsRequest;
-use App\Models\Skill;
+use App\Http\Requests\Dashboard\CounterRequest;
+use App\Models\Counter;
 use Livewire\Component;
 
 class Create extends Component
 {
-    public $skills = [];
+    public $counters = [];
     public function rules()
     {
-        return (new SkillsRequest())->rules();
+        return (new CounterRequest())->rules();
     }
     public function attributes()
     {
-        return (new SkillsRequest())->attributes();
+        return (new CounterRequest())->attributes();
     }
     public function submit()
     {
         $this->validate($this->rules(), [], $this->attributes());
-        Skill::create($this->skills);
-        $this->reset('skills');
+        Counter::create($this->counters);
+        $this->reset('counters');
         $this->dispatch('createModalToggle');
         $this->dispatch('refreshTable')->to(View::class);
         toastr()->success('Data has been saved successfully!');
     }
     public function render()
     {
-        return view('dashboard.pages.skills.create');
+        return view('dashboard.pages.counters.create');
     }
 }

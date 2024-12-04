@@ -80,6 +80,49 @@
                 <div data-i18n="Analytics">skills</div>
             </a>
         </li>
+        <!-- subscribes -->
+        <li class="menu-item @yield('subscribes-active')">
+            <a href="{{ route('admin.subscribes') }}" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-rss'></i>
+                <div data-i18n="Analytics">subscribes</div>
+            </a>
+        </li>
+        <!-- counters -->
+        <li class="menu-item @yield('counters-active')">
+            <a href="{{ route('admin.counters') }}" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-plus'></i>
+                <div data-i18n="Analytics">counters</div>
+            </a>
+        </li>
+        <!-- services -->
+        <li class="menu-item @yield('services-active')">
+            <a href="{{ route('admin.services') }}" class="menu-link">
+                <i class='menu-icon tf-icons bx bxs-select-multiple'></i>
+                <div data-i18n="Analytics">services</div>
+            </a>
+        </li>
+        <!-- messages -->
+        <li class="menu-item @yield('messages-active')">
+            <a href="{{ route('admin.messages') }}" class="menu-link">
+                <i class='menu-icon tf-icons bx bxs-chat'></i>
+                <div data-i18n="Analytics">messages</div>
+            </a>
+        </li>
+
+        <!-- categories -->
+        <li class="menu-item @yield('categories-active')">
+            <a href="{{ route('admin.categories') }}" class="menu-link">
+                <i class='menu-icon tf-icons bx bxs-category-alt'></i>
+                <div data-i18n="Analytics">categories</div>
+            </a>
+        </li>
+        <!-- projects -->
+        <li class="menu-item @yield('projects-active')">
+            <a href="{{ route('admin.projects') }}" class="menu-link">
+                <i class='menu-icon tf-icons bx bxl-product-hunt'></i>
+                <div data-i18n="Analytics">projects</div>
+            </a>
+        </li>
 
     </ul>
 </aside>

@@ -31,13 +31,9 @@
     </div>
     <div class="mb-3">
         <button class="btn btn-primary d-grid w-100" type="submit" wire:loading.attr="disabled">
-            <span wire:loading.remove>Sign in</span>
-            <div class="tezt-center">
-                <div class="spinner-border spinner-border-sm text-white" role="status" wire:loading
-                    wire:target="submit">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-            </div>
+            <span wire:loading.remove>
+                <x-dashboard.layouts.loading :name="'Sign in'"></x-dashboard.layouts.loading>
+            </span>
         </button>
     </div>
 </form>
