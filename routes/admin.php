@@ -27,6 +27,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::view('messages', 'dashboard.pages.messages.index')->name('messages');
         Route::view('categories', 'dashboard.pages.categories.index')->name('categories');
         Route::view('projects', 'dashboard.pages.projects.index')->name('projects');
+        Route::view('testmonials', 'dashboard.pages.testmonials.index')->name('testmonials');
+        Route::view('members', 'dashboard.pages.members.index')->name('members');
     });
     Route::view('login', 'dashboard.auth.pages.login')
         ->middleware('guest:admin')->name('login');

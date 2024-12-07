@@ -2,6 +2,7 @@
 
 namespace App\View\Components\Front\Partials;
 
+use App\Models\Member;
 use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
@@ -11,9 +12,14 @@ class Team extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public $team;
+    public function __construct(public $count = null)
     {
-        //
+        if (isset($count)) {
+            $this->team = Member::take($count)->get();
+        } else {
+            $this->team = Member::get();
+        }
     }
 
     /**

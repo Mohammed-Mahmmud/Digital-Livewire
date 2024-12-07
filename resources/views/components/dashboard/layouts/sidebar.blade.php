@@ -123,7 +123,20 @@
                 <div data-i18n="Analytics">projects</div>
             </a>
         </li>
-
+        <!-- testmonials -->
+        <li class="menu-item @yield('testmonials-active')">
+            <a href="{{ route('admin.testmonials') }}" class="menu-link">
+                <i class='menu-icon tf-icons bx bxs-message-square-dots'></i>
+                <div data-i18n="Analytics">testmonials</div>
+            </a>
+        </li>
+        <!-- members -->
+        <li class="menu-item @yield('members-active')">
+            <a href="{{ route('admin.members') }}" class="menu-link">
+                <i class='menu-icon tf-icons bx bxs-blanket bx-spin'></i>
+                <div data-i18n="Analytics">members</div>
+            </a>
+        </li>
     </ul>
 </aside>
 <!-- / Menu -->
