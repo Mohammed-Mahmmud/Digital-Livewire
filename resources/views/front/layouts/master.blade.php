@@ -5,7 +5,7 @@
 
 <body>
     <div class="container-xxl bg-white p-0">
-        {{-- @include('front.layouts.partials.spinner') --}}
+        @include('front.layouts.partials.spinner')
         <div class="container-xxl position-relative p-0">
             <x-front.layouts.navbar></x-front.layouts.navbar>
             @yield('front-header')

@@ -77,3 +77,4 @@
      </div>
  </div>
  <!-- Service End -->
+<?php /**PATH /home/mohamed-khater/Documents/projects/Digital-Livewire/DigitalLivewire/resources/views/components/front/partials/service.blade.php ENDPATH**/ ?>

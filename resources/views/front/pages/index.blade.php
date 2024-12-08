@@ -5,12 +5,12 @@
     <x-front.partials.main-header :slug="'Home'"></x-front.partials.main-header>
 @endsection
 @section('content')
-    <x-front.partials.feature />
-    <x-front.partials.about />
-    <x-front.partials.facts />
-    <x-front.partials.service />
+    @livewire('components.front.partials.services-component', ['count' => 3])
+    @livewire('components.front.partials.skills-component', ['count' => 4])
+    @livewire('components.front.partials.counter-component')
+    @livewire('components.front.partials.services-component')
     <x-front.partials.newsletter />
     <x-front.partials.projects />
-    <x-front.partials.testimonial />
+    @livewire('components.front.partials.testimonial', ['count' => 3])
     <x-front.partials.team count=3 />
 @endsection

@@ -3,12 +3,12 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Admin | @yield('title')</title>
+    <title>Admin | <?php echo $__env->yieldContent('title'); ?></title>
 
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ asset('dashboard') }}/assets/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="<?php echo e(asset('dashboard')); ?>/assets/img/favicon/favicon.ico" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,28 +18,29 @@
         rel="stylesheet" />
 
     <!-- Icons. Uncomment required icon fonts -->
-    <link rel="stylesheet" href="{{ asset('dashboard') }}/assets/vendor/fonts/boxicons.css" />
+    <link rel="stylesheet" href="<?php echo e(asset('dashboard')); ?>/assets/vendor/fonts/boxicons.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Core CSS -->
-    <link rel="stylesheet" href="{{ asset('dashboard') }}/assets/vendor/css/core.css"
+    <link rel="stylesheet" href="<?php echo e(asset('dashboard')); ?>/assets/vendor/css/core.css"
         class="template-customizer-core-css" />
-    <link rel="stylesheet" href="{{ asset('dashboard') }}/assets/vendor/css/theme-default.css"
+    <link rel="stylesheet" href="<?php echo e(asset('dashboard')); ?>/assets/vendor/css/theme-default.css"
         class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="{{ asset('dashboard') }}/assets/css/demo.css" />
+    <link rel="stylesheet" href="<?php echo e(asset('dashboard')); ?>/assets/css/demo.css" />
 
     <!-- Vendors CSS -->
-    <link rel="stylesheet" href="{{ asset('dashboard') }}/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="<?php echo e(asset('dashboard')); ?>/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
-    <link rel="stylesheet" href="{{ asset('dashboard') }}/assets/vendor/libs/apex-charts/apex-charts.css" />
+    <link rel="stylesheet" href="<?php echo e(asset('dashboard')); ?>/assets/vendor/libs/apex-charts/apex-charts.css" />
 
     <!-- Page CSS -->
 
     <!-- Helpers -->
-    <script src="{{ asset('dashboard') }}/assets/vendor/js/helpers.js"></script>
+    <script src="<?php echo e(asset('dashboard')); ?>/assets/vendor/js/helpers.js"></script>
 
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="{{ asset('dashboard') }}/assets/js/config.js"></script>
-    @yield('styles')
+    <script src="<?php echo e(asset('dashboard')); ?>/assets/js/config.js"></script>
+    <?php echo $__env->yieldContent('styles'); ?>
 </head>
+<?php /**PATH /home/mohamed-khater/Documents/projects/Digital-Livewire/DigitalLivewire/resources/views/dashboard/layouts/partials/main-head.blade.php ENDPATH**/ ?>

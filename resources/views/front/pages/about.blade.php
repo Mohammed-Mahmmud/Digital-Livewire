@@ -5,8 +5,8 @@
     <x-front.partials.sub-header :slug="'About'"></x-front.partials.sub-header>
 @endsection
 @section('content')
-    <x-front.partials.feature />
-    <x-front.partials.about />
-    <x-front.partials.facts />
-    <x-front.partials.team count=6/>
+    @livewire('components.front.partials.services-component', ['count' => 3])
+    @livewire('components.front.partials.skills-component')
+    @livewire('components.front.partials.counter-component')
+    <x-front.partials.team :count=6 />
 @endsection

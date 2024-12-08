@@ -5,7 +5,7 @@
     <x-front.partials.sub-header :slug="'Services'"></x-front.partials.sub-header>
 @endsection
 @section('content')
-    <x-front.partials.service></x-front.partials.service>
-    <x-front.partials.newsletter></x-front.partials.newsletter>
-    <x-front.partials.testimonial></x-front.partials.testimonial>
+    @livewire('components.front.partials.services-component')
+    <x-front.partials.newsletter />
+    @livewire('components.front.partials.testimonial', ['count' => 3])
 @endsection

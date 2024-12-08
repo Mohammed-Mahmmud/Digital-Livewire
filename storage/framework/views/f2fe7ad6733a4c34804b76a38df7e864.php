@@ -41,9 +41,10 @@
                 <a href="" class="btn btn-primary py-sm-3 px-sm-5 rounded-pill mt-3">Read More</a>
             </div>
             <div class="col-lg-6">
-                <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="{{ asset('front') }}/img/about.png">
+                <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="<?php echo e(asset('front')); ?>/img/about.png">
             </div>
         </div>
     </div>
 </div>
 <!-- About End -->
+<?php /**PATH /home/mohamed-khater/Documents/projects/Digital-Livewire/DigitalLivewire/resources/views/components/front/partials/about.blade.php ENDPATH**/ ?>

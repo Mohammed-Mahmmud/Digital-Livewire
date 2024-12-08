@@ -30,3 +30,4 @@
      </div>
  </div>
  <!-- Feature End -->
+<?php /**PATH /home/mohamed-khater/Documents/projects/Digital-Livewire/DigitalLivewire/resources/views/components/front/partials/feature.blade.php ENDPATH**/ ?>
